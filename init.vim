@@ -26,24 +26,34 @@ Plug 'https://github.com/mhinz/vim-startify' " Dashboard
 Plug 'https://github.com/Haron-Prime/Antares'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
-
-set encoding=UTF-8
-
+Plug 'https://github.com/ctrlpvim/ctrlp.vim'
+Plug 'https://github.com/Shougo/unite.vim'
+Plug 'https://github.com/jreybert/vimagit'
+Plug 'https://github.com/edkolev/promptline.vim'
+Plug 'https://github.com/autozimu/LanguageClient-neovim'
+Plug 'https://github.com/lambdalisue/battery.vim/'
+Plug 'mox-mox/vim-localsearch'
+Plug 'https://github.com/tpope/vim-fugitive'
 call plug#end()
 
+" ---------------Keymaps---------------
+let mapleader = " "
 
-nnoremap <space>e :NERDTreeToggle<CR>
+nnoremap <leader>e :NERDTreeToggle<CR>
 
 " Find files using Telescope command-line sugar.
-nnoremap <space>ff <cmd>Telescope find_files<cr>
-nnoremap <space>fg <cmd>Telescope live_grep<cr>
-nnoremap <space>fb <cmd>Telescope buffers<cr>
-nnoremap <space>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>s <Plug>localsearch_toggle
+nnoremap <tab> <cmd>bnext<cr>
 
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
-
+let g:battery#update_tabline = 1    " For tabline.
+let g:battery#update_statusline = 1 " For statusline.
 
 " To make the background transparent
 augroup user_colors
@@ -51,7 +61,32 @@ augroup user_colors
   autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
 augroup END
 
-:set termguicolors
+" Set the theme
 :colorscheme Antares
 
+" ----------Airline---------------
+set noshowmode
+let g:airline_powerline_fonts = 1
+let g:airline_theme='bubblegum'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
+" ~/full/path-to/file-name.js
+let g:airline#extensions#tabline#formatter = 'default'  " f/p/file-name.js
+let g:airline#extensions#tabline#formatter = 'jsformatter' " path-to/f
+let g:airline#extensions#tabline#formatter = 'unique_tail' " file-name.js
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " f/p/file-name.js
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ' '
+let g:airline_symbols.linenr = '☰ '
+let g:airline_symbols.maxlinenr = ' '
