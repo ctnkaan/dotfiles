@@ -30,7 +30,6 @@ Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 Plug 'https://github.com/Shougo/unite.vim'
 Plug 'https://github.com/jreybert/vimagit'
 Plug 'https://github.com/edkolev/promptline.vim'
-Plug 'https://github.com/autozimu/LanguageClient-neovim'
 Plug 'https://github.com/lambdalisue/battery.vim/'
 Plug 'mox-mox/vim-localsearch'
 Plug 'https://github.com/tpope/vim-fugitive'
@@ -67,6 +66,8 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 
 Plug 'maxmellon/vim-jsx-pretty'
+
+Plug 'tribela/vim-transparent'
 
 call plug#end()
 
