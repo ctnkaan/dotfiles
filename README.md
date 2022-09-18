@@ -1,5 +1,5 @@
 # dotfiles (Mainly my Neovim config)
 
-![image](https://user-images.githubusercontent.com/59853931/190860119-cc70296f-6603-4811-b3ca-27d8de5ce322.png)
-![image](https://user-images.githubusercontent.com/59853931/190860202-06344643-a3f4-4716-adc2-b101c22866c0.png)
-![image](https://user-images.githubusercontent.com/59853931/190860246-b4c28ab3-3659-4170-aefd-b5fd2ce1983a.png)
+![image](https://user-images.githubusercontent.com/59853931/190927080-950eea1f-7f4c-4363-a906-f1ffe116eac1.png)
+![image](https://user-images.githubusercontent.com/59853931/190927137-65761fe0-0e3f-4d8f-9be0-a11f1fc88048.png)
+![image](https://user-images.githubusercontent.com/59853931/190927021-ed542256-9894-4c35-aa0d-51a07c554c39.png)
