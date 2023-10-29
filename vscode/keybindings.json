@@ -1,0 +1,116 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+	// NAVIGATION
+	{
+		"key": "ctrl+shift+a",
+		"command": "workbench.action.terminal.focusNext",
+		"when": "terminalFocus"
+	},
+
+	{
+		"key": "ctrl+shift+b",
+		"command": "workbench.action.terminal.focusPrevious",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "ctrl+[Backquote]",
+		"command": "workbench.action.togglePanel"
+	},
+	{
+		"key": "ctrl+shift+[Backquote]",
+		"command": "workbench.action.terminal.new",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "ctrl+shift+w",
+		"command": "workbench.action.terminal.kill",
+		"when": "terminalFocus"
+	},
+	// FILE TREE
+	{
+		"command": "workbench.action.toggleSidebarVisibility",
+		"key": "ctrl+e"
+	},
+	{
+		"command": "workbench.files.action.focusFilesExplorer",
+		"key": "ctrl+e",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "n",
+		"command": "explorer.newFile",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
+	{
+		"command": "renameFile",
+		"key": "r",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
+	{
+		"key": "shift+n",
+		"command": "explorer.newFolder",
+		"when": "explorerViewletFocus"
+	},
+	{
+		"key": "shift+n",
+		"command": "workbench.action.newWindow",
+		"when": "!explorerViewletFocus"
+	},
+	{
+		"command": "deleteFile",
+		"key": "d",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
+
+	// EXTRA
+	{
+		"key": "ctrl+shift+5",
+		"command": "editor.emmet.action.matchTag"
+	},
+	{
+		"key": "ctrl+shift+z",
+		"command": "workbench.action.toggleZenMode"
+	},
+
+	// Changes for vscode
+	{
+		"key": "ctrl+k ctrl+shift+p",
+		"command": "extension.vim_ctrl+p",
+		"when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "-extension.vim_ctrl+p",
+		"when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+	},
+	{
+		"key": "ctrl+k ctrl+shift+f",
+		"command": "extension.vim_ctrl+f",
+		"when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode != 'Insert'"
+	},
+	{
+		"key": "ctrl+f",
+		"command": "-extension.vim_ctrl+f",
+		"when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode != 'Insert'"
+	},
+	{
+		"key": "ctrl+k ctrl+shift+d",
+		"command": "list.focusPageDown",
+		"when": "listFocus && !inputFocus"
+	},
+	{
+		"key": "ctrl+d",
+		"command": "-list.focusPageDown",
+		"when": "listFocus && !inputFocus"
+	},
+	{
+		"key": "ctrl+k ctrl+shift+d",
+		"command": "extension.vim_ctrl+d",
+		"when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+d",
+		"command": "-extension.vim_ctrl+d",
+		"when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
+	}
+]
