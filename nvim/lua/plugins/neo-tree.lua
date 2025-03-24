@@ -10,6 +10,9 @@ return {
 	config = function()
 		require("neo-tree").setup({
 			filesystem = {
+				window = {
+					position = "right",
+				},
 				filtered_items = {
 					visible = true,
 					show_hidden_count = true,
@@ -26,7 +29,8 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<leader>e", "<Cmd>Neotree toggle position=right<CR>", {})
+		vim.keymap.set("n", "<leader>e", "<Cmd>Neotree toggle <CR>", {})
+		vim.keymap.set("n", "<leader>ff", "<Cmd>Neotree focus <CR>", {})
 		vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
 	end,
 }
