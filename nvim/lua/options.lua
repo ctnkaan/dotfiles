@@ -7,6 +7,7 @@ vim.cmd("set relativenumber")
 
 vim.g.mapleader = " "
 vim.wo.number = true
+vim.opt.clipboard = "unnamedplus"
 
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
