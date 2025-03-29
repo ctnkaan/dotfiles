@@ -15,7 +15,7 @@ return {
     {
       "<leader>nf",
       function()
-        require("which-key").show({ global = false })
+        vim.lsp.buf.format()
       end,
       desc = "Format File",
     },
