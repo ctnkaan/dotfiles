@@ -13,7 +13,7 @@ return {
       desc = "Buffer Local Keymaps (which-key)",
     },
     {
-      "<leader>gf",
+      "<leader>nf",
       function()
         require("which-key").show({ global = false })
       end,
