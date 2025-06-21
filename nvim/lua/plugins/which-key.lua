@@ -16,10 +16,18 @@ return {
       desc = "DiffView Close",
     },
     {
+      "<leader><Tab>",
+      "<Cmd>BufferNext<CR>",
+      desc = "Move to Next Buffer",
+    },
+    {
+      "<leader>bq",
+      "<Cmd>BufferClose<CR>",
+      desc = "Close Buffer",
+    },
+    {
       "<leader>?",
-      function()
-        require("which-key").show({ global = false })
-      end,
+      "<Cmd>lua require('which-key').show({ global = false })<CR>",
       desc = "Buffer Local Keymaps (which-key)",
     },
     {
@@ -29,33 +37,24 @@ return {
       end,
       desc = "Format File",
     },
-    -- LSP keybindings
     {
       "K",
-      function()
-        vim.lsp.buf.hover()
-      end,
+      "<Cmd>lua vim.lsp.buf.hover()<CR>",
       desc = "LSP Hover",
     },
     {
       "<leader>gd",
-      function()
-        vim.lsp.buf.definition()
-      end,
+      "<Cmd>lua vim.lsp.buf.definition()<CR>",
       desc = "LSP Definition",
     },
     {
       "<leader>gr",
-      function()
-        vim.lsp.buf.references()
-      end,
+      "<Cmd>lua vim.lsp.buf.references()<CR>",
       desc = "LSP References",
     },
     {
       "<leader>ca",
-      function()
-        vim.lsp.buf.code_action()
-      end,
+      "<Cmd>lua vim.lsp.buf.code_action()<CR>",
       desc = "LSP Code Action",
     },
     -- Neotree keybindings
